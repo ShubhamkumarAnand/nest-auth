@@ -21,3 +21,12 @@ enum Role {
   REGULAR
   ADMIN
 }
+
+model Coffee {
+  id             Int      @id @default(autoincrement())
+  name           String
+  description    String?
+  recommendation Int      @default(9)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
